@@ -1,16 +1,19 @@
 <template>
-  <SignUp :signup-header="header"/>
+<!--  <SignUp :signup-header="header"/>-->
+<SignUp2 />
 </template>
 
 <script>
 import Modal from "./components/Modal.vue";
-import SignUp from "./components/Signup.vue";
+import SignUp1 from "./components/Signup1.vue";
+import SignUp2 from "./components/Signup2.vue";
 
 export default {
   name: "App",
   components: {
     Modal,
-    SignUp,
+    SignUp1,
+    SignUp2,
   },
   data() {
     return {

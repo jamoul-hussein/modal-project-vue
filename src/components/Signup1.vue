@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: "SignUp",
+  name: "SignUp1",
   props: ["signupHeader"],
 };
 </script>
@@ -59,7 +59,6 @@ export default {
   border: rgba(0, 0, 0, 0.38) solid 2px;
   border-radius: 8px;
   padding: 10px;
-
 }
 
 .container #email_label {

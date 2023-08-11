@@ -2,16 +2,16 @@
   <div class="container">
     <div class="form_container">
       <div class="title"><span>Login Form</span></div>
-      <form action="#">
+      <form id="signup-action" @submit.prevent="submitForm">
         <div class="row">
-          <i class="fas fa-user"></i>
-          <input type="text" placeholder="Email or Phone" required>
+          <i class="user-label"></i>
+          <input  v-model="formData.email" type="text" placeholder="Email" required>
         </div>
         <div class="row">
-          <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" required>
+          <i class="password-label"></i>
+          <input  v-model="formData.password" type="password" placeholder="Password" required>
         </div>
-        <div class="pass"><a href="#">Forgot password?</a></div>
+        <div class="forget-password"><a href="#">Forgot password?</a></div>
         <div class="row button">
           <input type="submit" value="Login">
         </div>
@@ -25,11 +25,24 @@
 export default {
   name: "SignUp2",
   props: ["signupHeader"],
+  data() {
+    return {
+      formData: {
+        email: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    submitForm() {
+      console.log(this.formData);
+    }
+  }
 };
+
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -101,15 +114,15 @@ form .row input::placeholder{
   align-items: center;
   justify-content: center;
 }
-.form_container form .pass{
+.form_container form .forget-password{
   margin: -8px 0 20px 0;
 }
-.form_container form .pass a{
+.form_container form .forget-password a{
   color: #16a085;
   font-size: 17px;
   text-decoration: none;
 }
-.form_container form .pass a:hover{
+.form_container form .forget-password a:hover{
   text-decoration: underline;
 }
 .form_container form .button input{

@@ -1,53 +1,32 @@
 <template>
-<!--  <SignUp :signup-header="header"/>-->
-<SignUp2 />
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> |
+    <a href="/sign-up1">Signup1</a> |
+    <a href="/sign-up2">Signup2</a> |
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-import Modal from "./components/Modal.vue";
-import SignUp1 from "./components/Signup1.vue";
-import SignUp2 from "./components/Signup2.vue";
-
-export default {
-  name: "App",
-  components: {
-    Modal,
-    SignUp1,
-    SignUp2,
-  },
-  data() {
-    return {
-      title: "",
-      header: "Sign Up",
-      text: "some text for sign up",
-      theme: "sale",
-      showPopUp: false,
-    };
-  },
-  methods: {
-    handleClick() {
-      console.log(this.$refs.name);
-      this.$refs.name.classList.add("active");
-      this.$refs.name.focus();
-    },
-    toggle() {
-      this.showPopUp = !this.showPopUp
-    }
-  },
-};
-</script>
-
 <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-/*#app {*/
-/*  font-family: Avenir, Helvetica, Arial, sans-serif;*/
-/*  -webkit-font-smoothing: antialiased;*/
-/*  -moz-osx-font-smoothing: grayscale;*/
-/*  text-align: center;*/
-/*  color: #2c3e50;*/
-/*  margin-top: 60px;*/
-/*}*/
-/*.buttonToggle {*/
-/*  margin-top: 160px;*/
-/*}*/
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>

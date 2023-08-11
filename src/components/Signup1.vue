@@ -1,16 +1,17 @@
 <template>
   <div class="container">
+    <div class="signup_container">
+      <h1>Sign Up</h1>
 
-    <h1>Sign Up</h1>
+      <label for="email" id="email_label">Email</label>
+      <input type="text" placeholder="Enter Email" name="email" id="email">
 
-    <label for="email" id="email_label">Email</label>
-    <input type="text" placeholder="Enter Email" name="email" id="email">
+      <label for="password" id="password_label">Password</label>
+      <input type="password" placeholder="Enter Password" name="psw" id="password">
 
-    <label for="password" id="password_label">Password</label>
-    <input type="password" placeholder="Enter Password" name="psw" id="password">
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="signup_btn">Sign Up</button>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="signup_btn">Sign Up</button>
+    </div>
   </div>
 </template>
 
@@ -28,8 +29,24 @@ export default {
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
 .container {
-  display: flex;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+  /*justify-items: center;*/
+  /*align-content: center;*/
+  /*text-align: center;*/
+  /*!*margin: 250px 700px;*!*/
+  /*border: rgba(0, 0, 0, 0.93) solid 2px;*/
+  /*border-radius: 8px;*/
+  /*height: 600px;*/
+  /*width: 600px;*/
+  /*box-shadow: rgba(0, 0, 0, 0.19) 10px 20px 40px, rgba(0, 0, 0, 0.19) 10px 20px 40px;*/
+}
+
+.container .signup_container {
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
@@ -40,7 +57,7 @@ export default {
   border-radius: 8px;
   height: 600px;
   width: 600px;
-  box-shadow: rgba(0, 0, 0, 0.19) 10px 20px 40px,rgba(0, 0, 0, 0.19) 10px 20px 40px;
+  box-shadow: rgba(0, 0, 0, 0.19) 10px 20px 40px, rgba(0, 0, 0, 0.19) 10px 20px 40px;
 }
 
 .container h1 {
@@ -53,35 +70,51 @@ export default {
   color: white;
 }
 
-.container #email{
-  width: 90%;
+.container #email {
+  width: 100%;
   margin-bottom: 50px;
   border: rgba(0, 0, 0, 0.38) solid 2px;
   border-radius: 8px;
   padding: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 .container #email_label {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 .container #password {
-  width: 90%;
+  width: 100%;
   margin-bottom: 50px;
   border: rgba(0, 0, 0, 0.38) solid 2px;
   border-radius: 8px;
   padding: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 .container #password_label {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
 }
 
-.container p, a{
+.container p, a {
   font-size: 18px;
 }
 
